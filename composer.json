@@ -1,0 +1,50 @@
+{
+    "name": "dbugapp/dbug-php",
+    "description": "Send debug payloads from PHP to the dbug desktop app",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tanner Campbell",
+            "email": "tcamp022@gmail.com"
+        }
+    ],
+    "contributors": [
+        "tanner Campbell <tcamp022@gmail.com>"
+    ],
+    "autoload": {
+        "psr-4": {
+            "DbugApp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+
+    "require": {
+      "php": ">=7.4"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18.3",
+        "pestphp/pest": "^3.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "pint": [
+            "@php vendor/bin/pint --ansi"
+        ],
+        "test": [
+            "@php vendor/bin/pest --colors --display-errors --testdox"
+        ]
+    },
+    "scripts-descriptions": {
+        "pint": "Run the Pint Linter and Fixer.",
+        "test": "Run the PHPUnit tests."
+    }
+}
