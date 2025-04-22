@@ -106,6 +106,7 @@ class DbugLogChannel
         return $logger;
     }
 }
+```
 
 Finally, create the `DbugHandler` class in the same directory:
 `app/Log/DbugHandler.php`
